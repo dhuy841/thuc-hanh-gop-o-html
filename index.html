@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch họp công ty</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lịch họp công ty</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Ngày</th>
+                <th>Giờ</th>
+                <th>Nội dung cuộc họp</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- HÀNG THỨ HAI: Dùng rowspan="2" gộp 2 dòng ở cột Ngày -->
+            <tr>
+                <td rowspan="2">Thứ Hai (05/10)</td>
+                <td>08:00 - 09:30</td>
+                <td>Họp giao ban đầu tuần các trưởng bộ phận</td>
+            </tr>
+            <tr>
+                <!-- Hàng này không cần <td> cho cột Ngày nữa vì đã bị rowspan từ trên chiếm -->
+                <td>14:00 - 15:30</td>
+                <td>Đánh giá tiến độ dự án Website</td>
+            </tr>
+
+            <!-- HÀNG THỨ BA: Dùng colspan="2" gộp 2 cột (Giờ + Nội dung) -->
+            <tr>
+                <td rowspan="2">Thứ Ba (06/10)</td>
+                <td>09:00 - 10:00</td>
+                <td>Phỏng vấn ứng viên vị trí Frontend Developer</td>
+            </tr>
+            <tr>
+                <!-- Dùng colspan="2" để gộp cột Giờ và Nội dung làm 1 -->
+                <td colspan="2">13:30 - 17:00: Tập huấn quy trình an toàn thông tin toàn công ty</td>
+            </tr>
+
+            <!-- HÀNG THỨ TƯ -->
+            <tr>
+                <td>Thứ Tư (07/10)</td>
+                <td>10:00 - 11:30</td>
+                <td>Gặp gỡ đối tác và ký kết hợp đồng</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
